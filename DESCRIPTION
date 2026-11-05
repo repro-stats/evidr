@@ -1,0 +1,21 @@
+Package: evidr
+Title: Review R Code Changes with Evidence and an Audit Trail
+Version: 0.1.0
+Authors@R: person("Ndoh", "Penn", email = "maintainer@example.org", role = c("aut", "cre"))
+Description: A local 'shiny' app in the spirit of 'testthat::snapshot_review()'.
+    A reviewer sees what an AI-drafted script changes in the code and in the
+    output, compares it with an independently written implementation, and
+    accepts, edits or rejects it. Each step is written to a hash-chained audit
+    trail with 'regulog'. Replays recompute fingerprints of code, data,
+    environment and output, and mark an earlier review stale when any of them
+    changed.
+URL: https://github.com/repro-stats/evidr
+BugReports: https://github.com/repro-stats/evidr/issues
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends: R (>= 4.1.0)
+Imports: shiny (>= 1.7.0), bslib (>= 0.5.0), htmltools, digest, callr, regulog, reproducr, utils, stats
+Suggests: testthat (>= 3.0.0), survival
+Config/testthat/edition: 3
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
